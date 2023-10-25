@@ -42,7 +42,7 @@ def predict_fn(input_data, models):
                                                     truncation=True,
                                                     return_tensors='pt')
     
-    # Convert example inputs to a format that is compatible with TorchScript tracing
+    
     example_inputs = tokenized_sequence_pair['input_ids'], tokenized_sequence_pair['attention_mask']
     
     with torch.no_grad():
